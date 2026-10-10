@@ -3,13 +3,132 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#b98289">
   <meta name="robots" content="noindex, nofollow">
-  <title>EWO – työn alla</title>
+  <meta name="description" content="Enlightenment Works — ajatuksia, työkaluja ja uusia näkökulmia.">
+  <title>Enlightenment Works — EWO</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --rose: #b98289;
+      --rose-deep: #a66e77;
+      --green: #426b50;
+      --green-dark: #31553e;
+      --paper: #fbf6f2;
+      --line: rgba(66, 107, 80, .25);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { min-height: 100%; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 28px 18px;
+      background:
+        radial-gradient(ellipse at 15% 12%, rgba(255,255,255,.24), transparent 42%),
+        radial-gradient(ellipse at 88% 90%, rgba(92,57,63,.12), transparent 38%),
+        var(--rose);
+      color: var(--green);
+      font-family: "Aptos", "Segoe UI", sans-serif;
+    }
+
+    main {
+      width: min(100%, 760px);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: clamp(38px, 8vw, 76px) clamp(22px, 7vw, 70px);
+      background: rgba(251, 246, 242, .94);
+      border: 1px solid rgba(255,255,255,.65);
+      border-radius: 28px;
+      box-shadow: 0 24px 70px rgba(68, 40, 45, .16);
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 13px;
+      margin-bottom: 26px;
+      color: var(--rose-deep);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .ornament::before, .ornament::after {
+      content: "";
+      width: 38px;
+      height: 1px;
+      background: currentColor;
+      opacity: .65;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--green-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 500;
+      letter-spacing: -.045em;
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      margin: 18px 0 0;
+      color: var(--rose-deep);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.15rem, 3vw, 1.55rem);
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .rule {
+      width: 58px;
+      height: 2px;
+      margin: 30px auto;
+      background: var(--rose);
+      border-radius: 2px;
+    }
+
+    .message {
+      max-width: 470px;
+      margin: 0 auto;
+      font-size: clamp(1rem, 2.5vw, 1.12rem);
+      line-height: 1.85;
+    }
+
+    .footer {
+      margin-top: 42px;
+      color: var(--green);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      opacity: .8;
+    }
+
+    @media (max-width: 420px) {
+      main { border-radius: 22px; }
+      .footer { letter-spacing: .14em; }
+    }
+  </style>
 </head>
 <body>
   <main>
-    <h1>EWO</h1>
-    <p>Sivusto on työn alla.</p>
+    <div class="ornament">EWO · Enlightenment Works</div>
+    <h1>Enlightenment<br>Works</h1>
+    <p class="subtitle">Ajatuksia, jotka avaavat uusia näkökulmia.</p>
+    <div class="rule" aria-hidden="true"></div>
+    <p class="message">
+      Tervetuloa. Rakennamme paikkaa oivalluksille, hyödyllisille aineistoille
+      ja menetelmille, jotka auttavat näkemään asioita uudella tavalla.
+    </p>
+    <div class="footer">SELKEYTTÄ · OIVALLUKSIA · MAHDOLLISUUKSIA</div>
   </main>
 </body>
 </html>
